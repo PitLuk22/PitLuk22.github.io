@@ -1,380 +1,374 @@
 * {
-    box-sizing: border-box;
-    font-family: sans-serif;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
-    margin: 17.5px 100px;
-    background: linear-gradient(to top, #6D107E, #F03358);
-    background-size: cover;
-    min-height: 100vh;
-    overflow: hidden;
+  margin: 17.5px 100px;
+  background: linear-gradient(to top, #6d107e, #f03358);
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .field {
-    width: 600px;
-    height: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px auto 0 auto;
-    background-color: black;
-    position: relative;
-    border-radius: 10px;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto 0 auto;
+  background-color: black;
+  position: relative;
+  border-radius: 10px;
 }
 
 .excel {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .snake_body {
-    width: 25px;
-    height: 25px;
-    background: url(../img/snake_body.svg);
-    background-size: cover;
-    transform: rotate(90deg);
+  width: 25px;
+  height: 25px;
+  background: url(../img/snake_body.svg);
+  background-size: cover;
+  transform: rotate(90deg);
 }
 
 .snake_head {
-    width: 25px;
-    height: 25px;
-    background: url(../img/snake_head.svg);
-    background-size: cover;
+  width: 25px;
+  height: 25px;
+  background: url(../img/snake_head.svg);
+  background-size: cover;
 }
 
 .apple {
-    background: url(../img/apple.svg);
-    background-size: cover;
+  background: url(../img/apple.svg);
+  background-size: cover;
 }
 
 .out {
-    display: block;
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    top: 140px;
-    left: -345px;
-    background: linear-gradient(to top, rgb(151, 21, 125), #1f1f58);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #0B2349;
-    font-size: 120px;
-    text-align: center;
-    line-height: 300px;
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 140px;
+  left: -345px;
+  color: #1f1f58;
+  font-size: 120px;
+  text-align: center;
+  line-height: 300px;
 }
 
 .btn {
-    width: 100px;
-    height: 70px;
-    background: linear-gradient(to top, rgb(151, 21, 125), #1f1f58);
-    position: absolute;
-    top: 310px;
-    right: -230px;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
-    transition: all .5s;
-    font-size: 20px;
+  width: 100px;
+  height: 70px;
+  background: linear-gradient(to top, rgb(151, 21, 125), #1f1f58);
+  position: absolute;
+  top: 310px;
+  right: -230px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+  transition: all 0.5s;
+  font-size: 20px;
 }
 
 .btn:hover {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .wrap {
-    position: absolute;
-    top: 195px;
-    right: -100px;
-    width: 70px;
-    display: flex;
+  position: absolute;
+  top: 195px;
+  right: -100px;
+  width: 70px;
+  display: flex;
 }
 
 .speed {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(to top, rgb(252, 0, 122), rgb(255, 0, 60));
-    /* border: 1px solid black; */
-    border-radius: 10px;
-    text-align: center;
-    padding: 8px;
-    margin: 0 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
-    transition: all .5s;
-
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to top, rgb(252, 0, 122), rgb(255, 0, 60));
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px;
+  margin: 0 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+  transition: all 0.5s;
 }
 
 .speed:hover {
-    box-shadow: none;
-    transform: translateY(-10%);
+  box-shadow: none;
+  transform: translateY(-10%);
 }
 
 .active {
-    background: none;
-    background: url(../img/fire.svg);
-    background-size: cover;
+  background: none;
+  background: url(../img/fire.svg);
+  background-size: cover;
 }
 
 .scoreTitle {
-    position: absolute;
-    top: 125px;
-    left: -270px;
-    font-size: 50px;
-    color: #1f1f58;
+  position: absolute;
+  top: 125px;
+  left: -270px;
+  font-size: 50px;
+  color: #1f1f58;
 }
 
 .speedTitle {
-    position: absolute;
-    top: -76px;
-    right: -155px;
-    font-size: 50px;
-    color: #1f1f58;
+  position: absolute;
+  top: -76px;
+  right: -155px;
+  font-size: 50px;
+  color: #1f1f58;
 }
 
 .buttons {
-    display: none;
+  display: none;
 }
 
 .reset {
-    display: none;
+  display: none;
 }
 
 .petr {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    width: 50px;
-    height: 50px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
 }
 
 /* /////////////////////////////////// MEDIA ////////////////////////////////// */
 
 @media (max-width: 1024px) {
-    body {
-        padding-right: 100px;
-    }
+  body {
+    padding-right: 100px;
+  }
 
-    .field {
-        width: 540px;
-        height: 540px;
-        margin-top: 200px;
-    }
+  .field {
+    width: 540px;
+    height: 540px;
+    margin-top: 200px;
+  }
 
-    .excel {
-        width: 22.5px;
-        height: 22.5px;
-    }
+  .excel {
+    width: 22.5px;
+    height: 22.5px;
+  }
 
-    .out {
-        top: -200px;
-        left: -75px;
-    }
+  .out {
+    top: -200px;
+    left: -75px;
+  }
 
-    .scoreTitle {
-        top: -175px;
-        left: 0;
-    }
+  .scoreTitle {
+    top: -175px;
+    left: 0;
+  }
 
-    .speedTitle {
-        top: -76px;
-        right: -230px;
-    }
+  .speedTitle {
+    top: -76px;
+    right: -230px;
+  }
 
-    .wrap {
-        top: -100px;
-        right: 230px;
-    }
+  .wrap {
+    top: -100px;
+    right: 230px;
+  }
 
-    .snake_body {
-        width: 22.5px;
-        height: 22.5px;
-    }
+  .snake_body {
+    width: 22.5px;
+    height: 22.5px;
+  }
 
-    .snake_head {
-        width: 22.5px;
-        height: 22.5px;
-    }
+  .snake_head {
+    width: 22.5px;
+    height: 22.5px;
+  }
 
-    .btn {
-        display: none;
-    }
+  .btn {
+    display: none;
+  }
 
-    .reset {
-        display: block;
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top: -174px;
-        left: -100px;
-        transition: all .5s;
-    }
+  .reset {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -174px;
+    left: -100px;
+    transition: all 0.5s;
+  }
 
-    .reset:active {
-        width: 40px;
-        height: 40px;
-    }
+  .reset:active {
+    width: 40px;
+    height: 40px;
+  }
 
-    .buttons {
-        position: absolute;
-        bottom: 190px;
-        right: -300px;
-        width: 300px;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
+  .buttons {
+    position: absolute;
+    bottom: 190px;
+    right: -300px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 
-    .buttons button {
-        width: 120px;
-        height: 70px;
-        margin: 5px;
-        border: none;
-        border-radius: 10px;
-        font-size: 30px;
-        line-height: 30px;
-        text-align: center;
-        background: linear-gradient(to top, rgb(151, 21, 125), #1f1f58);
-        color: bisque;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6)
-    }
+  .buttons button {
+    width: 120px;
+    height: 70px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: linear-gradient(to top, rgb(151, 21, 125), #1f1f58);
+    color: bisque;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+  }
 
-    .buttons .begin .up {
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-    }
+  .buttons .begin .up {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
 
-    .buttons .end .down {
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-    }
+  .buttons .end .down {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
 
-    .buttons .middle .right {
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
+  .buttons .middle .right {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 
-    .buttons .middle .left {
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-    }
+  .buttons .middle .left {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .field {
+    width: 540px;
+    height: 540px;
+    margin-top: 200px;
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: -235px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 576px) {
     body {
-        padding: 0;
+      margin: 0 auto;
     }
 
     .field {
-        width: 540px;
-        height: 540px;
-        margin-top: 200px;
+      width: 360px;
+      height: 360px;
+      margin-top: 250px;
+    }
+
+    .excel {
+      width: 15px;
+      height: 15px;
+    }
+
+    .out {
+      top: -340px;
+      left: 40px;
+      font-size: 80px;
+    }
+
+    .scoreTitle {
+      top: -215px;
+      left: -5px;
+      font-size: 40px;
+    }
+
+    .speedTitle {
+      top: 2px;
+      right: 75px;
+      font-size: 40px;
+    }
+
+    .wrap {
+      top: -116px;
+      right: 162px;
+    }
+
+    .speed {
+      width: 40px;
+      height: 40px;
+      font-size: 13px;
+    }
+
+    .snake_body {
+      width: 15px;
+      height: 15px;
+    }
+
+    .snake_head {
+      width: 15px;
+      height: 15px;
+    }
+
+    .btn {
+      display: none;
+    }
+
+    .reset {
+      display: block;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -220px;
+      left: 310px;
+      transition: all 0.5s;
+    }
+
+    .reset:active {
+      width: 40px;
+      height: 40px;
     }
 
     .buttons {
-        position: absolute;
-        bottom: -235px;
-        left: 0;
-        transform: translateX(-50%);
-        width: 300px;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
+      position: absolute;
+      bottom: -240px;
+      left: 0;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
     }
-
-    @media (max-width: 576px) {
-        body {
-            margin: 0 auto;
-        }
-
-        .field {
-            width: 360px;
-            height: 360px;
-            margin-top: 250px;
-        }
-
-        .excel {
-            width: 15px;
-            height: 15px;
-        }
-
-        .out {
-            top: -340px;
-            left: 40px;
-            font-size: 80px;
-        }
-
-        .scoreTitle {
-            top: -215px;
-            left: -5px;
-            font-size: 40px;
-        }
-
-        .speedTitle {
-            top: 2px;
-            right: 75px;
-            font-size: 40px;
-        }
-
-        .wrap {
-            top: -116px;
-            right: 162px;
-        }
-
-        .speed {
-            width: 40px;
-            height: 40px;
-            font-size: 13px;
-        }
-
-        .snake_body {
-            width: 15px;
-            height: 15px;
-        }
-
-        .snake_head {
-            width: 15px;
-            height: 15px;
-        }
-
-        .btn {
-            display: none;
-        }
-
-        .reset {
-            display: block;
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            top: -220px;
-            left: 310px;
-            transition: all .5s;
-        }
-
-        .reset:active {
-            width: 40px;
-            height: 40px;
-        }
-
-        .buttons {
-            position: absolute;
-            bottom: -240px;
-            left: 0;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-        }
-
-    }
-
+  }
 }
