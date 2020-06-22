@@ -10,6 +10,27 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
+.circle,
+.name {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes Orbita2 {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(540deg);
+  }
+}
+
+.circle {
+  animation: Orbita2 5s linear infinite;
+}
 
 .field {
   width: 600px;
