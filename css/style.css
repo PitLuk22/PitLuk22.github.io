@@ -172,14 +172,14 @@ body {
   }
 
   .field {
-    width: 540px;
-    height: 540px;
+    width: 510px;
+    height: 510px;
     margin-top: 120px;
   }
 
   .excel {
-    width: 22.5px;
-    height: 22.5px;
+    width: 21.25px;
+    height: 21.25px;
   }
 
   .out {
@@ -206,13 +206,13 @@ body {
   }
 
   .snake_body {
-    width: 22.5px;
-    height: 22.5px;
+    width: 21.25px;
+    height: 21.25px;
   }
 
   .snake_head {
-    width: 22.5px;
-    height: 22.5px;
+    width: 21.25px;
+    height: 21.25px;
   }
 
   .btn {
@@ -285,11 +285,6 @@ body {
 @media (max-width: 768px) {
   body {
     padding: 0;
-  }
-
-  .field {
-    width: 540px;
-    height: 540px;
   }
 
   .buttons {
