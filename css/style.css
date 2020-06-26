@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
+
 .circle,
 .name {
   position: absolute;
@@ -23,6 +24,7 @@ body {
   from {
     transform: rotate(180deg);
   }
+
   to {
     transform: rotate(540deg);
   }
@@ -73,7 +75,7 @@ body {
   width: 300px;
   height: 300px;
   position: absolute;
-  top: 140px;
+  top: 330px;
   left: -345px;
   color: #1f1f58;
   font-size: 120px;
@@ -134,7 +136,7 @@ body {
 
 .scoreTitle {
   position: absolute;
-  top: 125px;
+  top: 330px;
   left: -270px;
   font-size: 50px;
   color: #1f1f58;
@@ -162,6 +164,48 @@ body {
   bottom: 10px;
   width: 50px;
   height: 50px;
+}
+
+.res-table {
+  width: 200px;
+  min-height: 100px;
+  position: fixed;
+  top: 40px;
+  left: 45px;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1f1f58;
+}
+
+.high-score::after {
+  content: '';
+  display: block;
+  width: 160px;
+  border-bottom: 5px solid #BEF761;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+
+.high-score__num {
+  overflow: hidden;
+}
+
+.high-score__num::after {
+  content: '';
+  display: block;
+  width: 70px;
+  border-bottom: 3px solid #BEF761;
+  transform: translateX(-200px);
+  transition: 0.3s all;
+
+}
+
+.high-score__num:hover::after {
+  transform: translateX(45px);
 }
 
 /* /////////////////////////////////// MEDIA ////////////////////////////////// */

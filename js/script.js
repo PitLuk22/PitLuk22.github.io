@@ -104,6 +104,22 @@ document.addEventListener('DOMContentLoaded', function () {
         location.reload();
     });
 
+    // Create Result Table
+
+    const resTable = document.createElement('div');
+    resTable.classList.add('res-table');
+    document.body.prepend(resTable);
+
+    const highScore = document.createElement('div');
+    highScore.classList.add('high-score');
+    highScore.textContent = 'High score';
+    resTable.append(highScore);
+
+    const places = document.createElement('div');
+    places.classList.add('high-score__all');
+    resTable.append(places);
+
+
     // Create buttons 
 
     let buttons = document.createElement('div');
@@ -226,6 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
             GAME OVER
             Your score: ${score}!
             `);
+            showResultScore(score);
 
         }
 
@@ -252,6 +269,62 @@ document.addEventListener('DOMContentLoaded', function () {
 
         steps = true;
     }
+
+    function showResultScore(score) {
+
+        if (score !== 0) {
+            if (localStorage.getItem('score')) {
+                let value = JSON.parse(localStorage.getItem('score'));
+                localStorage.setItem('score', JSON.stringify([...value, score]));
+                local();
+            } else {
+                localStorage.setItem('score', JSON.stringify([score]));
+                local();
+            }
+        } else {
+            start();
+        }
+
+    }
+    showResultScore(0);
+
+
+    function start() {
+        if (localStorage.getItem('score')) {
+            local();
+        }
+    }
+
+    function local() {
+        let arr = JSON.parse(localStorage.getItem('score')); // массив с очками
+        let newArr = [...arr].sort((a, b) => {
+            if (a < b) {
+                return 1;
+            } else if (a > b) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }).filter((elem, index) => index < 5);
+        let obj = {
+            ...newArr
+        };
+        console.log(obj);
+        places.innerHTML = '';
+        for (let key in obj) {
+            if (key == 0) {
+                places.innerHTML += `<div class='high-score__num'>${+key + 1}ST : ${obj[key]}</div><br>`;
+            } else if (key == 1) {
+                places.innerHTML += `<div class='high-score__num'>${+key + 1}ND : ${obj[key]}</div><br>`;
+            } else if (key == 2) {
+                places.innerHTML += `<div class='high-score__num'>${+key + 1}RD : ${obj[key]}</div><br>`;
+            } else {
+                places.innerHTML += `<div class='high-score__num'>${+key + 1}TH : ${obj[key]}</div><br>`;
+            }
+
+        }
+    }
+
 
     let speedBlocks = document.querySelectorAll('.speed');
     speedBlocks[3].classList.add('active');
@@ -301,6 +374,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     });
+
+
 
 
 
