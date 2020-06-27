@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
             cells[i].setAttribute('posX', x);
             cells[i].setAttribute('posY', y);
             x++;
-
         }
     }
     setAtt();
@@ -276,26 +275,26 @@ document.addEventListener('DOMContentLoaded', function () {
             if (localStorage.getItem('score')) {
                 let value = JSON.parse(localStorage.getItem('score'));
                 localStorage.setItem('score', JSON.stringify([...value, score]));
-                local();
+                addScoreOnPage();
             } else {
                 localStorage.setItem('score', JSON.stringify([score]));
-                local();
+                addScoreOnPage();
             }
         } else {
-            start();
+            firstTry();
         }
 
     }
     showResultScore(0);
 
 
-    function start() {
+    function firstTry() {
         if (localStorage.getItem('score')) {
-            local();
+            addScoreOnPage();
         }
     }
 
-    function local() {
+    function addScoreOnPage() {
         let arr = JSON.parse(localStorage.getItem('score')); // массив с очками
         let newArr = [...arr].sort((a, b) => {
             if (a < b) {
