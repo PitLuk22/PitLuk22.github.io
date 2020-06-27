@@ -93,6 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
     scoreTitle.classList.add('scoreTitle');
     field.append(scoreTitle);
     scoreTitle.textContent = 'Score:';
+    out.addEventListener('click', function () {
+        localStorage.setItem('res', 3012030);
+    });
 
     // Restart
 
