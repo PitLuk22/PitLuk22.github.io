@@ -378,8 +378,9 @@ body {
     }
 
     .res-table {
-      top: 5px;
+      top: 11px;
       left: -25px;
+      position: absolute;
     }
 
     .field {
