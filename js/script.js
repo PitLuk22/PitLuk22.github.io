@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const resTable = document.createElement('div');
     resTable.classList.add('res-table');
-    document.body.prepend(resTable);
+    field.append(resTable);
 
     const highScore = document.createElement('div');
     highScore.classList.add('high-score');
