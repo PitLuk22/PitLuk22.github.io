@@ -1,6 +1,14 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'StarseedPro';
+}
+
+@font-face {
+  font-family: 'StarseedPro';
+  font-display: swap;
+  src: url('../fonts/StarseedPro.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 body {
