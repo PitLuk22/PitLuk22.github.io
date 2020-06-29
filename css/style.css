@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
-  font-family: 'StarseedPro';
+  font-family: "StarseedPro";
 }
 
 @font-face {
-  font-family: 'StarseedPro';
+  font-family: "StarseedPro";
   font-display: swap;
-  src: url('../fonts/StarseedPro.ttf') format('truetype');
+  src: url("../fonts/StarseedPro.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
@@ -199,6 +199,7 @@ body {
 
 .high-score__num {
   overflow: hidden;
+  margin-top: -11px;
 }
 
 .high-score__num::after {
@@ -285,7 +286,7 @@ body {
   }
 
   .res-table {
-    top: 120px;
+    top: 88px;
     left: -200px;
   }
 
@@ -341,6 +342,9 @@ body {
   body {
     padding: 0;
   }
+  .out {
+    top: -200px;
+  }
 
   .buttons {
     position: absolute;
@@ -366,6 +370,10 @@ body {
     left: -163px;
     font-size: 15px;
   }
+  .high-score__num {
+    margin-top: 5px;
+    margin-bottom: -10px;
+  }
 
   .high-score::after {
     width: 100px;
@@ -379,7 +387,8 @@ body {
     }
 
     .high-score__num {
-      margin-bottom: 5px;
+      margin-bottom: -28px;
+      margin-top: 5px;
     }
 
     .res-table {
